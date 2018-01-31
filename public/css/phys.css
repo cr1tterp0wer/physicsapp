@@ -22,12 +22,15 @@ a:hover {
 /*
  *  * Base structure
  *   */
+html{background:#333;}
 html,
 body {
     overflow-x:hidden;
 }
 
 body {
+  display:block;
+  position:relative;
   color: #fff;
 }
 
@@ -134,12 +137,16 @@ h3.masthead-brand{margin:0;}
     background-repeat:no-repeat;
     background-position:center;
     background-size: cover;
+    transition: all 200ms linear;
 }
 .laser-svg{
   background-image: url("../assets/images/laser.svg");
 }
 .crosshair-svg{
   background-image:url("../assets/images/crosshair.svg");
+}
+.cross-p{
+  background-image:url("../assets/images/cross.svg");
 }
 .dot-product01{
   background-image:url("../assets/images/dotproduct.jpg");
@@ -153,9 +160,11 @@ h3.masthead-brand{margin:0;}
 }
 .svg.laser-svg:hover {
     cursor: pointer;
+    filter:none;
 }
-.svg.crosshair-svg:hover {
+.svg.cross-p:hover {
     cursor: pointer;
+    filter:none;
 }
 .p-window{
   display:block;
@@ -201,7 +210,57 @@ h3.masthead-brand{margin:0;}
   margin:100px auto;
 }
 .full-h{height:100vh;}
+#scroll-progress{
+  height: 2px;
+  position: fixed;
+  bottom: 0;
+  background: #ff1800;
+}
 
+
+/*
+ *
+ *  *Form
+ *  */
+
+.formme form{
+  display:block;
+  position:relative;
+  width:100%;
+  max-width:500px;
+  text-align:center;
+  margin:0 auto;
+}
+.formme form input[type="text"]{
+  background: rgba(0,0,0,0.1);
+  border: none;
+  padding: 10px;
+  display: block;
+  color: rgba(0,0,0,0.5);
+  margin:2px auto;
+  width: 50px;
+  text-align: center;
+}
+form input[type="submit"]{
+  background: rgba(0,0,0,0.1);
+  border: 0;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 14px 45px;
+  font-size: 15pt;
+  transition: all 150ms linear;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing:2px;
+}
+form input[type="submit"]:hover{
+    box-shadow: inset 1px 1px 10px 1px rgba(0,0,0,0.25);
+}
+input::-webkit-input-placeholder{
+  color:rgba(0,0,0,0.3);
+}
+input:-moz-placeholder {
+  color:rgba(0,0,0,0.3);
+}
 /*
  *  * Footer
  *   */

@@ -11,17 +11,22 @@ var smoothScroll = function(){ $('.smooth').on('click', function() {
 // smoothScroll();
 
 var backScroll = function(){
-
-  $(document).scroll(function(){
+   
+  var blur    = 0; 
+  var offset  = 0;
+  var dotP    = $('#dot-product')
+  var crossP  = $('#cross-product')
+  var dotPscope   = $('.dot-product01')
+  var crossPscope = $('.cross-product-triple') 
+  var progress    = $('#scroll-progress');
     
-    var blur    = 0; 
-    var offset  = 0;
-    var dotP    = $('#dot-product')
-    var crossP  = $('#cross-product')
-    var dotPscope   = $('.dot-product01')
-    var crossPscope = $('.cross-product-triple') 
+  $(document).scroll(function(){
 
-    if( $(document).scrollTop() >= $('#home').position().top &&
+      //update Progress bar
+     progress.width( $(document).width() * 
+                     getScrollDelta() );
+
+     if( $(document).scrollTop() >= $('#home').position().top &&
          $(document).scrollTop() <= $('#home').position().top + $('#home').height() ){
         $('body').removeClassRegEx(/\-back*/);
         $('body').addClass('gray-back');
@@ -77,10 +82,18 @@ var backScroll = function(){
        $('.masthead-brand').show();
      } 
   });
+
+
+    
 };
 backScroll();
 
+var getScrollDelta = function(){
 
+  return 1 - ( ($(document).height() - $(document).scrollTop()
+         - $(window).height()) / ($(document).height() 
+         - $(window).height())  ); 
+}
 
 // jQUERY addtions
 jQuery.fn.removeClassRegEx = function(regex) {

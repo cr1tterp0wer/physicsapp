@@ -7,6 +7,7 @@
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/phys.css">
       <link href="css/style.css" rel="stylesheet"/>
+      <link rel="icon" href="assets/images/ion.ico">
       <title>Physics</title>
     </head>
   <body class="gray-back">
@@ -39,10 +40,30 @@
     </div> 
 
     <div class="main-section container" id="dot-product">       
-      <div class="svg laser-svg"></div>
+        <a href="https://www.cr1tterp0wer.com/zoho/game"><div class="svg laser-svg"></div></a>
       <div class="">
         <h2>Dot Product</h2>
-        <div class="p-window">
+         <div class="formme">
+          <form id="dot-p-form">
+            <div> 
+              <div class="float-left">
+                <input type="text" placeholder="x" name="x1">
+                <input type="text" placeholder="y" name="x1">
+                <input type="text" placeholder="z" name="x1">
+              </div>
+            </div>
+            <div> 
+              <div class="float-right">
+                <input type="text" placeholder="x" name="x1">
+                <input type="text" placeholder="y" name="x1">
+                <input type="text" placeholder="z" name="x1">
+              </div>
+            </div>
+            <input type="submit" value="calculate">
+          </form>
+        </div>
+
+       <div class="p-window">
          <div class="periscope-window dot-product01"></div> 
         </div>
         <div class="definition">
@@ -53,9 +74,30 @@
       </div>
     </div>
     <div class="main-section container" id="cross-product">       
-      <div class="svg crosshair-svg"></div>
+      <div class="svg cross-p"></div>
       <div class="">
+
         <h2>Cross Product</h2>
+        <div class="formme">
+          <form id="cross-p-form">
+            <div> 
+              <div class="float-left">
+                <input type="text" placeholder="x" name="x1">
+                <input type="text" placeholder="y" name="x1">
+                <input type="text" placeholder="z" name="x1">
+              </div>
+            </div>
+            <div> 
+              <div class="float-right">
+                <input type="text" placeholder="x" name="x1">
+                <input type="text" placeholder="y" name="x1">
+                <input type="text" placeholder="z" name="x1">
+              </div>
+            </div>
+            <input type="submit" value="calculate">
+          </form>
+        </div>
+
         <div class="p-window">
           <div class="periscope-window cross-product-triple"></div> 
         </div>
@@ -91,13 +133,13 @@
       </div>
     </div>
   </div>
-    
     <footer class="mastfoot mt-auto">
       <div class="inner">
         <p>Christopher Stenqvist - 2018</p>
-    </div>
+      </div>
     </footer>
 
+      <div id="scroll-progress"></div>    
   </body>
 </html>
 
