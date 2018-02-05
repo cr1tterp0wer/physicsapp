@@ -223,7 +223,8 @@ h3.masthead-brand{margin:0;}
   height: 2px;
   position: fixed;
   bottom: 0;
-  background: #ff1800;
+  /* background: #ff1800; */
+  background:#00ffc4;
 }
 
 
