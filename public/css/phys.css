@@ -168,22 +168,31 @@ h3.masthead-brand{margin:0;}
 }
 .p-window{
   display:block;
-  width:100%;
+  position:relative;
+  width:500px;
   height:500px;
-  margin: 20px auto 100px auto;
+  margin:100px auto;
+  border-radius:50%;
+  overflow:hidden;
+  background-color:white;
+}
+.p-shadow{
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  box-shadow: inset 1px 1px 20px #333;
+  border-radius:50%;
+  z-index:10;
 }
 .periscope-window{
   width:500px;
   height:500px;
-
-  margin:100px auto;
-  text-align:center;
   border-radius: 50%;
-  box-shadow: inset 1px 1px 20px #333;
-  background-color: #fff;
   background-size:400px;
   background-position: center;
-    
   background-repeat: no-repeat;
   background-attachment:fixed;
 
@@ -254,6 +263,11 @@ form input[type="submit"]{
 }
 form input[type="submit"]:hover{
     box-shadow: inset 1px 1px 10px 1px rgba(0,0,0,0.25);
+}
+.form-result p{
+  margin: 50px auto;
+  font-size: 40pt;
+  height: 80px;
 }
 input::-webkit-input-placeholder{
   color:rgba(0,0,0,0.3);
