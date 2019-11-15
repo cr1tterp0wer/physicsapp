@@ -3,9 +3,7 @@ var express = require('express');
 var app     = express();
 var path    = require('path');
 var http    = require('http'); //http server obj
-var PORT    = 3131;
 
-app.set('port',PORT);
 app.use(express.static('public'));
 
 //define routes
