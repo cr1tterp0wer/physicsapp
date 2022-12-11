@@ -103,7 +103,7 @@
       "resolved": "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz",
       "version": "1.8.1"
     },
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "finalhandler": {
       "integrity": "sha1-zgtoVbRYU+eRsvzGgARtiCU91/U=",
       "requires": {
